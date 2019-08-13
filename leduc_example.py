@@ -31,6 +31,8 @@ if __name__ == '__main__':
 #                                         use_pre_layers_adv=False,
 #                                         use_pre_layers_avrg=False,
 
+                                         eval_agent_export_freq=9999999,  # Don't export
+                                         
                                          max_buffer_size_adv=3.636e5,  # 364k * 11 = ~4M
                                          max_buffer_size_avrg=3.636e5,  # 364k * 11 = ~4M
                                          
@@ -102,6 +104,6 @@ if __name__ == '__main__':
                                              DISTRIBUTED=True,
                                          )
                                          ),
-                  eval_methods={"lbr": 25000},
+                  eval_methods={"lbr": 5},
                   n_iterations=None)
     ctrl.run()
