@@ -42,7 +42,7 @@ if __name__ == '__main__':
                                          agent_bet_set=bet_sets.B_5,
 
 #                                         use_pre_layers_br=True,
-                                         use_pre_layers_avg=True,
+#                                         use_pre_layers_avg=True,
                                          n_units_final_br=64,
                                          n_units_final_avg=64,
                                          n_merge_and_table_layer_units_br=64,
