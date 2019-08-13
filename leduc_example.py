@@ -47,11 +47,11 @@ if __name__ == '__main__':
 #                                         n_units_final_avg=64,
 #                                         n_merge_and_table_layer_units_br=64,
 #                                         n_merge_and_table_layer_units_avg=64,
-                                         rnn_units_br=64,
-                                         rnn_units_avg=64,
-                                         n_cards_state_units_br=128,
-                                         n_cards_state_units_avg=128,
-                                         
+#                                         rnn_units_br=64,
+#                                         rnn_units_avg=64,
+#                                         n_cards_state_units_br=128,
+#                                         n_cards_state_units_avg=128,
+#                                         
                                          cir_buf_size_each_la=6e5 / N_WORKERS,
                                          res_buf_size_each_la=2e6,
                                          n_envs=128,
