@@ -31,7 +31,7 @@ if __name__ == '__main__':
                                              EvalAgentDeepCFR.EVAL_MODE_AVRG_NET,  # Deep CFR
                                          ),
 
-                                         DISTRIBUTED=False,
+                                         DISTRIBUTED=True,
                                          ),
                   eval_methods={
                       "br": 3,
