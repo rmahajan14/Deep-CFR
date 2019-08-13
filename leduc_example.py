@@ -104,6 +104,6 @@ if __name__ == '__main__':
                                              DISTRIBUTED=True,
                                          )
                                          ),
-                  eval_methods={"lbr": 50},
+                  eval_methods={"lbr": 1},
                   n_iterations=10)
     ctrl.run()
