@@ -52,23 +52,23 @@ if __name__ == '__main__':
 #                                         n_cards_state_units_br=128,
 #                                         n_cards_state_units_avg=128,
 #                                         
-                                         cir_buf_size_each_la=6e5 / N_WORKERS,
-                                         res_buf_size_each_la=2e6,
-                                         n_envs=128,
-                                         n_steps_per_iter_per_la=128,
-
-                                         lr_br=0.1,
-                                         lr_avg=0.01,
-
-                                         mini_batch_size_br_per_la=64,
-                                         mini_batch_size_avg_per_la=64,
-                                         n_br_updates_per_iter=1,
-                                         n_avg_updates_per_iter=1,
-
-                                         eps_start=0.08,
-                                         eps_const=0.007,
-                                         eps_exponent=0.5,
-                                         eps_min=0.0,
+#                                         cir_buf_size_each_la=6e5 / N_WORKERS,
+#                                         res_buf_size_each_la=2e6,
+#                                         n_envs=128,
+#                                         n_steps_per_iter_per_la=128,
+#
+#                                         lr_br=0.1,
+#                                         lr_avg=0.01,
+#
+#                                         mini_batch_size_br_per_la=64,
+#                                         mini_batch_size_avg_per_la=64,
+#                                         n_br_updates_per_iter=1,
+#                                         n_avg_updates_per_iter=1,
+#
+#                                         eps_start=0.08,
+#                                         eps_const=0.007,
+#                                         eps_exponent=0.5,
+#                                         eps_min=0.0,
 
                                          lbr_args=LBRArgs(
                                              lbr_bet_set=bet_sets.B_5,
