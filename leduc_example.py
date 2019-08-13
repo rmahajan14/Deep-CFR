@@ -38,16 +38,16 @@ if __name__ == '__main__':
                                          
                                          n_traversals_per_iter=2,  # 800 * 11 = 8,800
                                          
-                                         n_batches_adv_training=1200,
-                                         n_batches_avrg_training=10000,  # trained far more than necessary
+                                         n_batches_adv_training=12,
+                                         n_batches_avrg_training=100,  # trained far more than necessary
                                          n_merge_and_table_layer_units_adv=64,
                                          n_merge_and_table_layer_units_avrg=64,
                                          n_units_final_adv=64,
                                          n_units_final_avrg=64,
                                          n_cards_state_units_adv=64,
                                          n_cards_state_units_avrg=64,
-                                         mini_batch_size_adv=256,  # 256 * 11 = 2,816
-                                         mini_batch_size_avrg=512,  # 512 * 11 = 5,632
+                                         mini_batch_size_adv=8,  # 256 * 11 = 2,816
+                                         mini_batch_size_avrg=16,  # 512 * 11 = 5,632
                                          init_adv_model="last",  # warm start neural weights with init from last iter
                                          init_avrg_model="random",
                                          use_pre_layers_adv=True,
