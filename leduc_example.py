@@ -97,13 +97,13 @@ if __name__ == '__main__':
 
                                          lbr_args=LBRArgs(
                                              lbr_bet_set=bet_sets.B_5,
-                                             n_lbr_hands_per_seat=3000,
+                                             n_lbr_hands_per_seat=50,
                                              lbr_check_to_round=Poker.TURN,
                                              n_parallel_lbr_workers=N_LBR_WORKERS,
                                              use_gpu_for_batch_eval=False,
                                              DISTRIBUTED=True,
                                          )
                                          ),
-                  eval_methods={"lbr": 5},
+                  eval_methods={"lbr": 50},
                   n_iterations=None)
     ctrl.run()
