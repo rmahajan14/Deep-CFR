@@ -9,7 +9,7 @@ from PokerRL.eval.lbr import LBRArgs
 from PokerRL.game import bet_sets
 
 if __name__ == '__main__':
-    N_WORKERS = 16
+    N_WORKERS = 50
     N_LBR_WORKERS = 3
     ctrl = Driver(t_prof=TrainingProfile(
 #                                            name="SD-CFR_LEDUC_EXAMPLE",
@@ -36,7 +36,7 @@ if __name__ == '__main__':
                                          max_buffer_size_adv=3.636e5,  # 364k * 11 = ~4M
                                          max_buffer_size_avrg=3.636e5,  # 364k * 11 = ~4M
                                          
-                                         n_traversals_per_iter=50,  # 800 * 11 = 8,800
+                                         n_traversals_per_iter=10,  # 800 * 11 = 8,800
                                          
                                          n_batches_adv_training=12,
                                          n_batches_avrg_training=100,  # trained far more than necessary
@@ -105,5 +105,5 @@ if __name__ == '__main__':
                                          )
                                          ),
                   eval_methods={"lbr": 50},
-                  n_iterations=None)
+                  n_iterations=10)
     ctrl.run()
