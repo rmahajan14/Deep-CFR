@@ -9,7 +9,7 @@ from PokerRL.eval.lbr import LBRArgs
 from PokerRL.game import bet_sets
 
 if __name__ == '__main__':
-    N_WORKERS = 32
+    N_WORKERS = 16
     N_LBR_WORKERS = 3
     ctrl = Driver(t_prof=TrainingProfile(
 #                                            name="SD-CFR_LEDUC_EXAMPLE",
