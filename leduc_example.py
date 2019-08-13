@@ -31,6 +31,29 @@ if __name__ == '__main__':
 #                                         use_pre_layers_adv=False,
 #                                         use_pre_layers_avrg=False,
 
+                                         max_buffer_size_adv=3.636e5,  # 364k * 11 = ~4M
+                                         max_buffer_size_avrg=3.636e5,  # 364k * 11 = ~4M
+                                         
+                                         n_traversals_per_iter=800,  # 800 * 11 = 8,800
+                                         
+                                         n_batches_adv_training=1200,
+                                         n_batches_avrg_training=10000,  # trained far more than necessary
+                                         n_merge_and_table_layer_units_adv=64,
+                                         n_merge_and_table_layer_units_avrg=64,
+                                         n_units_final_adv=64,
+                                         n_units_final_avrg=64,
+                                         n_cards_state_units_adv=64,
+                                         n_cards_state_units_avrg=64,
+                                         mini_batch_size_adv=256,  # 256 * 11 = 2,816
+                                         mini_batch_size_avrg=512,  # 512 * 11 = 5,632
+                                         init_adv_model="last",  # warm start neural weights with init from last iter
+                                         init_avrg_model="random",
+                                         use_pre_layers_adv=True,
+                                         use_pre_layers_avrg=True,
+                                         
+                                         
+                                         
+                                         
                                          name="NFSP_DISTRIBUTED_LH_RNN",
 
                                          DISTRIBUTED=True,
