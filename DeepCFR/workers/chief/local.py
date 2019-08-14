@@ -169,6 +169,16 @@ class Chief(_ChiefBase):
             eval_agent._strategy_buffers = self._strategy_buffers  # could copy - it's just for the export, so it's ok
             eval_agent.set_mode(mode=MODE)
             eval_agent.store_to_disk(path=_dir, file_name="eval_agent" + MODE)
+    
+    def store_to_disk(self, path, file_name):
+        path = f'STD_single.pkl'
+        pickle.dump(obj=self, file=path, file_name=file_name)
+
+        
+    def periodically_checkpoint(self):
+#        if self._cfr_iter % self._t_prof.checkpoint_freq == 0:
+        print("Saving Checkpoint")
+        self.checkpoint(curr_step=self._cfr_iter)
 
     # __________________________________________________ Checkpointing _________________________________________________
 #    def checkpoint(self, curr_step):
@@ -210,6 +220,7 @@ class Chief(_ChiefBase):
                 with open(path, "wb") as pkl_file:
                     print(' HIIII c dumping')
                     pickle.dump(obj=eval_agent, file=pkl_file, protocol=pickle.HIGHEST_PROTOCOL)
+                    print(' HIIII d dumped')
                         
    
 #        if self._SINGLE:

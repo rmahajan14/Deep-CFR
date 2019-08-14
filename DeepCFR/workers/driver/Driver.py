@@ -119,6 +119,7 @@ class Driver(DriverBase):
             # """"""""""""""""
             # Checkpoint
             # """"""""""""""""
+            print('going to periodically checkpoint-------')
             self.periodically_checkpoint()
 
     def _any_eval_needs_avrg_net(self):
