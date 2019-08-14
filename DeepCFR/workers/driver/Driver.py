@@ -114,6 +114,7 @@ class Driver(DriverBase):
                     "\n"
                 )
 
+            self.chief_handle.checkpoint(self._cfr_iter)
             self._cfr_iter += 1
 
             # """"""""""""""""
