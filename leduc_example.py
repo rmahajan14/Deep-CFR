@@ -65,6 +65,7 @@ if __name__ == '__main__':
 
                                          game_cls=DiscretizedNLHoldem,
                                          agent_bet_set=bet_sets.B_5,
+                                         checkpoint_freq=1,
 
 #                                         use_pre_layers_br=True,
 #                                         use_pre_layers_avg=True,
