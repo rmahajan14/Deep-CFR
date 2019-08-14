@@ -169,22 +169,10 @@ class Chief(_ChiefBase):
             eval_agent._strategy_buffers = self._strategy_buffers  # could copy - it's just for the export, so it's ok
             eval_agent.set_mode(mode=MODE)
             eval_agent.store_to_disk(path=_dir, file_name="eval_agent" + MODE)
-    
-#    def store_to_disk(self, path, file_name):
-#        path = f'STD_single.pkl'
-#        pickle.dump(obj=self, file=path, file_name=file_name)
-#        print('SAVINGGGG PICKLEEE')
-
-        
-#    def periodically_checkpoint(self):
-##        if self._cfr_iter % self._t_prof.checkpoint_freq == 0:
-#        print("Saving Checkpoint")
-#        self.checkpoint(curr_step=self._cfr_iter)
 
     # __________________________________________________ Checkpointing _________________________________________________
-#    def checkpoint(self, curr_step):
     def checkpoint(self, curr_step):
-        print('HIIII a checkpoint')
+        print('HIIII a')
         if self._SINGLE:
             for p_id in range(self._t_prof.n_seats):
 #                state = {
@@ -205,35 +193,19 @@ class Chief(_ChiefBase):
 #                with open(self._get_checkpoint_file_path(name=self._t_prof.name, step=curr_step,
 #                                                         cls=self.__class__, worker_id="P" + str(p_id)),
 #                          "wb") as pkl_file:
-#                path = f'single_{p_id}.pkl'
-                print('HIIII b for pid')
+                path = f'sample_{p_id}.pkl'
+                print('HIIII a')
                 
 #                def do_pickle(obj, path, file_name):
 #    create_dir_if_not_exist(path)
 #    with open(ospj(path, str(file_name) + ".pkl"), "wb") as pkl_file:
 #        pickle.dump(obj=obj, file=pkl_file, protocol=pickle.HIGHEST_PROTOCOL)
-#                res = curr_step%10
-#                d = (curr_step-res)/10
-                d = curr_step
-#                if res == 1:
-                path = f'single_{p_id}_{d}.pkl'
-#                if curr_step == 1:
+                
+                
+                
                 with open(path, "wb") as pkl_file:
-                    print(' HIIII c dumping')
+                    print(' HIIIIb')
                     pickle.dump(obj=eval_agent, file=pkl_file, protocol=pickle.HIGHEST_PROTOCOL)
-                    print(' HIIII d dumped')
-                        
-   
-#        if self._SINGLE:
-#            for p_id in range(self._t_prof.n_seats):
-#                state = {
-#                    "strat_buffer": self._strategy_buffers[p_id].state_dict(),
-#                }
-#
-#                with open(self._get_checkpoint_file_path(name=self._t_prof.name, step=curr_step,
-#                                                         cls=self.__class__, worker_id="P" + str(p_id)),
-#                          "wb") as pkl_file:
-#                    pickle.dump(obj=state, file=pkl_file, protocol=pickle.HIGHEST_PROTOCOL)
 
     def load_checkpoint(self, name_to_load, step):
         if self._SINGLE:
