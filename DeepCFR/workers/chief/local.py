@@ -196,14 +196,16 @@ class Chief(_ChiefBase):
                 path = f'sample_{p_id}.pkl'
                 print('HIIII a')
                 
-                from PokerRL.game.InteractiveGame import InteractiveGame
-                game = InteractiveGame(env_cls=eval_agent.env_bldr.env_cls,
-                           env_args=eval_agent.env_bldr.env_args,
-                           seats_human_plays_list=[0],
-                           eval_agent=eval_agent,
-                           )
-    
-                game.start_to_play()
+                if True:
+                #Can replace later with if iterations=10, for now let it be
+                    from PokerRL.game.InteractiveGame import InteractiveGame
+                    game = InteractiveGame(env_cls=eval_agent.env_bldr.env_cls,
+                               env_args=eval_agent.env_bldr.env_args,
+                               seats_human_plays_list=[0],
+                               eval_agent=eval_agent,
+                               )
+        
+                    game.start_to_play()
                 
 #                def do_pickle(obj, path, file_name):
 #    create_dir_if_not_exist(path)
