@@ -173,6 +173,7 @@ class Chief(_ChiefBase):
     def store_to_disk(self, path, file_name):
         path = f'STD_single.pkl'
         pickle.dump(obj=self, file=path, file_name=file_name)
+        print('SAVINGGGG PICKLEEE')
 
         
     def periodically_checkpoint(self):
