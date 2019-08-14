@@ -196,7 +196,7 @@ class Chief(_ChiefBase):
                 path = f'sample_{p_id}.pkl'
                 print('HIIII a')
                 
-                if True:
+                if curr_step == 1:
                 #Can replace later with if iterations=10, for now let it be
                     from PokerRL.game.InteractiveGame import InteractiveGame
                     game = InteractiveGame(env_cls=eval_agent.env_bldr.env_cls,
