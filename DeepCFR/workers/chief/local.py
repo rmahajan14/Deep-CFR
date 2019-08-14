@@ -170,16 +170,16 @@ class Chief(_ChiefBase):
             eval_agent.set_mode(mode=MODE)
             eval_agent.store_to_disk(path=_dir, file_name="eval_agent" + MODE)
     
-    def store_to_disk(self, path, file_name):
-        path = f'STD_single.pkl'
-        pickle.dump(obj=self, file=path, file_name=file_name)
-        print('SAVINGGGG PICKLEEE')
+#    def store_to_disk(self, path, file_name):
+#        path = f'STD_single.pkl'
+#        pickle.dump(obj=self, file=path, file_name=file_name)
+#        print('SAVINGGGG PICKLEEE')
 
         
-    def periodically_checkpoint(self):
-#        if self._cfr_iter % self._t_prof.checkpoint_freq == 0:
-        print("Saving Checkpoint")
-        self.checkpoint(curr_step=self._cfr_iter)
+#    def periodically_checkpoint(self):
+##        if self._cfr_iter % self._t_prof.checkpoint_freq == 0:
+#        print("Saving Checkpoint")
+#        self.checkpoint(curr_step=self._cfr_iter)
 
     # __________________________________________________ Checkpointing _________________________________________________
 #    def checkpoint(self, curr_step):
