@@ -63,7 +63,7 @@ if __name__ == '__main__':
 
                                          nn_type="recurrent",
 
-                                         game_cls=StandardLeduc,
+                                         game_cls=DiscretizedNLHoldem,
                                          agent_bet_set=bet_sets.B_5,
 #                                         checkpoint_freq=1,
 

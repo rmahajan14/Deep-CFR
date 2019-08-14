@@ -196,6 +196,15 @@ class Chief(_ChiefBase):
                 path = f'sample_{p_id}.pkl'
                 print('HIIII a')
                 
+                from PokerRL.game.InteractiveGame import InteractiveGame
+                game = InteractiveGame(env_cls=eval_agent.env_bldr.env_cls,
+                           env_args=eval_agent.env_bldr.env_args,
+                           seats_human_plays_list=[0],
+                           eval_agent=eval_agent,
+                           )
+    
+                game.start_to_play()
+                
 #                def do_pickle(obj, path, file_name):
 #    create_dir_if_not_exist(path)
 #    with open(ospj(path, str(file_name) + ".pkl"), "wb") as pkl_file:
@@ -205,7 +214,7 @@ class Chief(_ChiefBase):
                 
 #                with open(path, "wb") as pkl_file:
 #                    print(' HIIIIb')
-##                    import pdb; pdb.set_trace()
+#                    import pdb; pdb.set_trace()
 #                    pickle.dump(obj=eval_agent, file=pkl_file, protocol=pickle.HIGHEST_PROTOCOL)
 
     def load_checkpoint(self, name_to_load, step):
