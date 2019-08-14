@@ -56,9 +56,9 @@ if __name__ == '__main__':
                                          
                                          
                                          
-                                         name="NFSP_DISTRIBUTED_LH_RNN",
+                                         name="DISNLHT_DISTRIBUTED_LH_RNN",
 
-                                         DISTRIBUTED=True,
+                                         DISTRIBUTED=False,
                                          n_learner_actor_workers=N_WORKERS,
 
                                          nn_type="recurrent",
@@ -102,9 +102,9 @@ if __name__ == '__main__':
                                              lbr_check_to_round=Poker.TURN,
                                              n_parallel_lbr_workers=N_LBR_WORKERS,
                                              use_gpu_for_batch_eval=False,
-                                             DISTRIBUTED=True,
+                                             DISTRIBUTED=False,
                                          )
                                          ),
                   eval_methods={"lbr": 1},
-                  n_iterations=10)
+                  n_iterations=200)
     ctrl.run()
