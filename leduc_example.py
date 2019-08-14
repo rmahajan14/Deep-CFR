@@ -4,7 +4,7 @@ from DeepCFR.EvalAgentDeepCFR import EvalAgentDeepCFR
 from DeepCFR.TrainingProfile import TrainingProfile
 from DeepCFR.workers.driver.Driver import Driver
 
-from PokerRL import DiscretizedNLHoldem, Poker
+from PokerRL import DiscretizedNLHoldem, StandardLeduc, Poker
 from PokerRL.eval.lbr import LBRArgs
 from PokerRL.game import bet_sets
 
@@ -63,7 +63,7 @@ if __name__ == '__main__':
 
                                          nn_type="recurrent",
 
-                                         game_cls=DiscretizedNLHoldem,
+                                         game_cls=StandardLeduc,
                                          agent_bet_set=bet_sets.B_5,
 #                                         checkpoint_freq=1,
 
