@@ -205,7 +205,7 @@ class Chief(_ChiefBase):
                 
                 with open(path, "wb") as pkl_file:
                     print(' HIIIIb')
-                    import pdb; pdb.set_trace()
+#                    import pdb; pdb.set_trace()
                     pickle.dump(obj=eval_agent, file=pkl_file, protocol=pickle.HIGHEST_PROTOCOL)
 
     def load_checkpoint(self, name_to_load, step):
