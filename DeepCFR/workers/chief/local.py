@@ -173,7 +173,7 @@ class Chief(_ChiefBase):
     # __________________________________________________ Checkpointing _________________________________________________
 #    def checkpoint(self, curr_step):
     def checkpoint(self, curr_step):
-#        print('HIIII a')
+        print('HIIII a checkpoint')
         if self._SINGLE:
             for p_id in range(self._t_prof.n_seats):
 #                state = {
@@ -194,8 +194,8 @@ class Chief(_ChiefBase):
 #                with open(self._get_checkpoint_file_path(name=self._t_prof.name, step=curr_step,
 #                                                         cls=self.__class__, worker_id="P" + str(p_id)),
 #                          "wb") as pkl_file:
-                path = f'single_{p_id}.pkl'
-#                print('HIIII a')
+#                path = f'single_{p_id}.pkl'
+                print('HIIII b for pid')
                 
 #                def do_pickle(obj, path, file_name):
 #    create_dir_if_not_exist(path)
@@ -208,7 +208,7 @@ class Chief(_ChiefBase):
                 path = f'single_{p_id}_{d}.pkl'
 #                if curr_step == 1:
                 with open(path, "wb") as pkl_file:
-#                        print(' HIIIIb')
+                    print(' HIIII c dumping')
                     pickle.dump(obj=eval_agent, file=pkl_file, protocol=pickle.HIGHEST_PROTOCOL)
                         
    
