@@ -107,5 +107,5 @@ if __name__ == '__main__':
                                          )
                                          ),
                   eval_methods={"lbr": 10},
-                  n_iterations=200)
+                  n_iterations=50)
     ctrl.run()
