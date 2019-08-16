@@ -119,7 +119,7 @@ class LearnerActor(WorkerBase):
             lb = self._t_prof.n_traversals_per_iter #5
             ub = self._t_prof.n_traversals_per_iter*3 #15
             n_traversals=np.interp(cfr_iter, [20, 100], [lb, ub]) #5 to 10
-            n_traversals = round(n_traversals)
+            n_traversals = int(round(n_traversals))
         if cfr_iter > 100:
             n_traversals = self._t_prof.n_traversals_per_iter*3 #15
         
