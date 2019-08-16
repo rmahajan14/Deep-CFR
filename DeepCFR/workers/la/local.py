@@ -112,13 +112,31 @@ class LearnerActor(WorkerBase):
         for s in iteration_strats:
             s.load_net_state_dict(state_dict=self._adv_wrappers[s.owner].net_state_dict())
 
-#        #ADDED_CODE #TODO
-        if cfr_iter < 20:
+##        #ADDED_CODE #TODO
+#        if cfr_iter < 20:
+#            n_traversals=self._t_prof.n_traversals_per_iter #5
+#        elif 20 <= cfr_iter <= 100:
+#            lb = self._t_prof.n_traversals_per_iter #5
+#            ub = self._t_prof.n_traversals_per_iter*3 #15
+#            n_traversals=np.interp(cfr_iter, [20, 100], [lb, ub]) #5 to 10
+#            n_traversals = int(round(n_traversals))
+#        if cfr_iter > 100:
+#            n_traversals = self._t_prof.n_traversals_per_iter*3 #15
+#        
+#        self._data_sampler.generate(n_traversals=n_traversals,
+#                                    traverser=traverser,
+#                                    iteration_strats=iteration_strats,
+#                                    cfr_iter=cfr_iter,
+#                                    )
+##        #ADDED_CODE #TODO
+        
+        #ADDED_CODE #TODO
+        if cfr_iter < 2:
             n_traversals=self._t_prof.n_traversals_per_iter #5
-        elif 20 <= cfr_iter <= 100:
+        elif 2 <= cfr_iter <= 100:
             lb = self._t_prof.n_traversals_per_iter #5
             ub = self._t_prof.n_traversals_per_iter*3 #15
-            n_traversals=np.interp(cfr_iter, [20, 100], [lb, ub]) #5 to 10
+            n_traversals=np.interp(cfr_iter, [2, 100], [lb, ub]) #5 to 10
             n_traversals = int(round(n_traversals))
         if cfr_iter > 100:
             n_traversals = self._t_prof.n_traversals_per_iter*3 #15
@@ -129,6 +147,8 @@ class LearnerActor(WorkerBase):
                                     cfr_iter=cfr_iter,
                                     )
 #        #ADDED_CODE #TODO
+        
+        
 #        self._data_sampler.generate(n_traversals=self._t_prof.n_traversals_per_iter,
 #                                    traverser=traverser,
 #                                    iteration_strats=iteration_strats,
